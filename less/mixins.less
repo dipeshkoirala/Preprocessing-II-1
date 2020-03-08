@@ -1,6 +1,30 @@
 // Mixins in here
+
+// [ ] Buttons: Create a parametric mixin that can create the missing buttons in the design file.
+//  Use the `mixins.less` file to create your mixin.
+
 .flex-layout(@dk,@kd) {
   display: flex;
   justify-content: @dk;
   align-items: @kd;
+}
+//for button
+.spacing(@m, @p,@r) {
+  margin: @m;
+  padding: @p;
+  border-radius: @r;
+}
+.btn {
+  .spacing(5%, 3%, 8%);
+  @media @mobile {
+    width: 50%;
+    .spacing(10% auto, 3%, 9%);
+  }
+}
+
+.flex-spacing() {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  height: auto;
 }
