@@ -1,1 +1,33 @@
 // Navigation Styles here
+.navImg {
+  border-bottom: 2px dashed silver;
+  background: @sandy-beach;
+  header {
+    .flex-layout(flex-end, center);
+
+    nav {
+      width: 90%;
+      .flex-spacing();
+      .flex-layout(space-evenly, center);
+      flex-direction: row;
+    } //nav
+    a {
+      font-size: 15px;
+      margin: 2%;
+      padding: 3%;
+      text-decoration: none;
+    } //a
+    @media @mobile {
+      //background: blue;
+      .flex-spacing();
+
+      // display: flex;
+      // flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      // margin: 1%;
+      // width: 99%;
+      // border: 4px solid dodgerblue;
+    }
+  } //header
+} //navImage
